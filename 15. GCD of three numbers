@@ -1,0 +1,48 @@
+*/For example: 10, 20, and 30
+Min (10, 20, 30) =10 can divide all there numbers. So we will take one for loop which will start form min of the numbers and will stop the loop
+when it became one, since all numbers are divisible by one. Inside for loop we will write one if conditions which will check divisibility of both the numbers./*
+
+
+#include<stdio.h>
+int gcd(int , int , int);
+int main()
+{
+int i , j , k , g;
+scanf("%d %d %d", &i , &j , &k);
+
+g = gcd(i , j , k);
+printf("%d",g);
+
+return 0;
+}
+
+int gcd(int i , int j , int k)
+{
+int least;
+least = i;
+while(!( (i == j) && (j == k) ) )
+{
+i = (i == 0 ? least : i);
+j = (j == 0 ? least : j);
+k = (k == 0 ? least : k);
+if(i <= j)
+{
+if(i <= k)
+least = i;
+else
+least = k;
+}
+else
+{
+if(j <= k)
+least = j;
+else
+least = k;
+}
+i = i % least;
+j = j % least;
+k = k % least;
+}
+return least;
+
+}
