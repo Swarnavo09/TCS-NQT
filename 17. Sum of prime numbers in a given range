@@ -1,3 +1,17 @@
+/* Given a range [l, r], the task is to find the sum of all the prime numbers within that range.
+Input : l=1 and r=6
+Output : 10
+2 + 3 + 5
+
+Input : l=4 and r=13
+Output : 36
+5 + 7 + 11 + 13 = 36 */
+
+
+
+
+
+
 #include<stdio.h>
 
 int main(){
