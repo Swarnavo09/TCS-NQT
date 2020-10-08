@@ -1,0 +1,24 @@
+//Method 1 ( Using Bit Operators & Masking )
+
+/* In this method we create a mask with the most significant bit set and And ( &) the mask and the number. If the result is 0 then we know that the Most Significant Bit (MSB) of the number is 0. If the result is 1 then the MSB of the number is 1. Then we right shift the mask by 1 bit and repeat the process.*/
+
+#include <stdio.h>
+void binary(unsigned int);
+void main() {
+unsigned int num;
+printf("Enter Decimal Number : ");
+scanf("%u",&num);
+binary(num);
+}
+void binary(unsigned int num) {
+unsigned int mask=0x80000000;
+printf("\nThe Binary Number is : ");
+while(mask > 0){
+if((num & mask) == 0 )
+printf("0");
+else
+printf("1");
+mask = mask >> 1;
+}
+printf("\n");
+}
