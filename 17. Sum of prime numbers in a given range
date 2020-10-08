@@ -1,0 +1,84 @@
+#include<stdio.h>
+
+int main(){
+
+    int numbr,k,remark,first,last,sum=0;
+
+    printf("Give the First Number for the Range : ");
+    scanf("%d",&first);
+    printf("\n Give the Last Number for the Range : ");
+    scanf("%d",&last);
+
+    for(numbr= first; numbr<= last; ++numbr)
+    {
+        remark=0;
+        for(k=2; k<=numbr/2; k++)
+        {
+            if((numbr % k) == 0){
+                remark++;
+                break;
+                
+            }
+            
+        }
+        if(remark==0)
+            sum += numbr;
+    }
+
+   printf("\n Sum of prime numbers is:  %d ",sum);
+
+   return 0;
+
+}
+
+
+
+
+
+
+//JAVA-
+public class Main
+{
+// Method to compute the prime number 
+    // Time Complexity is O(sqrt(N)) 
+    static boolean checkPrime(int numberToCheck) 
+    { 
+        if(numberToCheck == 1) { 
+            return false; 
+        } 
+        for (int i = 2; i*i <= numberToCheck; i++) { 
+            if (numberToCheck % i == 0) { 
+                return false; 
+            } 
+        } 
+        return true; 
+    } 
+  
+    // Method to iterate the loop from l to r 
+    // If prime number detects, sum the value 
+    static int primeSum(int l, int r) 
+    { 
+        int sum = 0; 
+        for (int i = r; i >= l; i--) { 
+  
+            // Check for prime 
+            boolean isPrime = checkPrime(i); 
+            if (isPrime) { 
+  
+                // Sum the prime number 
+                sum = sum + i; 
+            } 
+        } 
+        return sum; 
+    } 
+    // Time Complexity is O(r x sqrt(N)) 
+  
+    // Driver code 
+    public static void main(String[] args) 
+    { 
+        int l = 4, r = 13; 
+  
+        // Call the method with l and r 
+        System.out.println(primeSum(l, r)); 
+    } 
+}
