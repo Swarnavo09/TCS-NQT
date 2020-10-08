@@ -1,0 +1,32 @@
+//Solution 1 ( using sprintf )
+
+/* sprint usage is just like printf. Instead of printing the value on the console we print the value into a string ( char array ).
+
+printf => Print on Console
+
+fprintf => Print into a file
+
+sprint => Print into a string
+
+*/
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+int number, nitems;
+char clear[25];
+char token[25];
+printf(“\nPlease enter a number :”);
+fflush(stdin);
+nitems = scanf(“%d”, &number);
+while ( nitems != 1 ){
+/* Clear the Buffer */
+gets(clear);
+printf(“\nPlease enter a number – digits only :”);
+nitems = scanf(“%d”, &number);
+}
+printf(“\nThe number of items scanned = %d”, nitems);
+sprintf(token, “%d”, number);
+printf(“\nThe number %d is converted into string : %s\n”, number, token);
+}
