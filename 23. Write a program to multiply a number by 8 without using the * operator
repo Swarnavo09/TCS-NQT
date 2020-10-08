@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+int num,ans,n;
+ans=0;
+n=8;
+printf("\nEnter the number to be multiplied : ");
+scanf("%d",&num);
+while(n!=0)
+{
+ans=ans+num;
+n = n-1;
+}
+printf("\nResult : %d",ans);
+}
