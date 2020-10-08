@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+int sum;
+
+if(argc == 1)
+{
+printf("enter number : ");
+}
+else
+{
+int i,j,r,a[10];
+sum = atoi(argv[1]) + atoi(argv[2]);
+printf("sum %d\n",sum);
+
+for(i=0;sum>0;i++)
+{
+r = sum%2;
+a[i] = r;
+sum = sum/2;
+}
+printf("binary format is\n");
+for(j=i-1;j>=0;j–)
+{
+printf("%d",a[j]);
+}
+}
+return 0;
+}
