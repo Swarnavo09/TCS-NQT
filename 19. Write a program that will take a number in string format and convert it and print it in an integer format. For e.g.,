@@ -1,0 +1,24 @@
+/* Input String => ”574”
+Output Integer => 574 */
+
+#include<stdio.h> 
+#include<math.h>
+
+int main() 
+{ 
+    char str[1000], i=0,num=0; 
+    
+    scanf("%s",str);
+    
+    // in Ascii 48 - 57 represent 0 - 9
+    // subtracting 48 from each will give us actual value in int
+    while(str[i]!='\0'){
+        
+        num = str[i] - 48;
+        printf("%d",num);
+        i++;
+    }
+        
+        
+    return 0; 
+}
