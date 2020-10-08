@@ -1,0 +1,17 @@
+/* Left shift the number by 5 bits and subtract the number once. For e.g., If the number is 10 left shift by 5 bits gives.
+
+Left Shift by 1 bit is multiplication by 2
+Left Shift by 5 bits is multiplication by 32
+
+Since we need to multiply by 31 what we do is multiply the number by 32 and subtract the number once. /*
+
+#include <stdio.h>
+void main()
+{
+int T,n;
+scanf("%d",&T);
+n=T;
+n=n<<5;
+n=n-T;
+printf("%d",n);
+}
