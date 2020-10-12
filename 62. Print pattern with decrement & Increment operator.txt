@@ -1,0 +1,27 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                            * * * * *
+                            * * * *
+                            * * *
+                            * *
+                            * 
+              print this pattern in outerloop Decrement operator and inner loop Increment operator  
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=5;i>=1;i--)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+}
